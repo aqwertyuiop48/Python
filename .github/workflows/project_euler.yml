@@ -1,12 +1,7 @@
 on:
-  pull_request:
-    # Run only if a file is changed within the project_euler directory and related files
-    paths:
-      - "project_euler/**"
-      - ".github/workflows/project_euler.yml"
-      - "scripts/validate_solutions.py"
-  schedule:
-    - cron: "0 0 * * *" # Run everyday
+  push:
+    branches:
+      - master
 
 name: "Project Euler"
 
