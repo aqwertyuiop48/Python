@@ -50,3 +50,15 @@ We are on [Discord](https://the-algorithms.com/discord) and [Gitter](https://git
 ## 📜 List of Algorithms
 
 See our [directory](DIRECTORY.md) for easier navigation and a better overview of the project.
+
+---------
+
+### To sync with original repo
+
+<pre>
+git remote add upstream https://github.com/TheAlgorithms/Python.git
+git fetch upstream
+git add . && git commit -m "."
+git merge upstream/master
+git push origin master
+</pre>

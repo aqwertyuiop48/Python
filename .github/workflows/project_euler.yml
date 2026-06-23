@@ -1,12 +1,8 @@
 on:
-  pull_request:
-    # Run only if a file is changed within the project_euler directory and related files
-    paths:
-      - "project_euler/**"
-      - ".github/workflows/project_euler.yml"
-      - "scripts/validate_solutions.py"
-  schedule:
-    - cron: "0 0 * * *" # Run everyday
+  push:
+    branches:
+      - master
+  workflow_dispatch:
 
 name: "Project Euler"
 
@@ -21,7 +17,7 @@ jobs:
           libxml2-dev libxslt-dev
           libhdf5-dev
           libopenblas-dev
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v6
       - uses: astral-sh/setup-uv@v7
       - uses: actions/setup-python@v6
         with:
@@ -39,7 +35,7 @@ jobs:
           libxml2-dev libxslt-dev
           libhdf5-dev
           libopenblas-dev
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v6
       - uses: astral-sh/setup-uv@v7
       - uses: actions/setup-python@v6
         with:
